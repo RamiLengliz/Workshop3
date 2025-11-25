@@ -1,0 +1,65 @@
+.list-suggestion {
+  padding: 20px 40px;
+}
+
+.list-suggestion input[type="text"] {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: border-color 0.3s;
+}
+
+.list-suggestion input[type="text"]:focus {
+  outline: none;
+  border-color: #3b82f6;
+}
+
+.list-suggestion .card {
+  background-color: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.list-suggestion .card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.list-suggestion button {
+  padding: 6px 12px;
+  margin-right: 10px;
+  border: none;
+  border-radius: 6px;
+  background-color: #3b82f6;
+  color: white;
+  cursor: pointer;
+  font-size: 13px;
+  transition: background-color 0.3s;
+}
+
+.list-suggestion button:hover {
+  background-color: #2563eb;
+}
+
+.list-suggestion em {
+  color: #ef4444;
+  font-style: normal;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .list-suggestion {
+    padding: 15px 20px;
+  }
+  .list-suggestion .card {
+    padding: 15px;
+  }
+}

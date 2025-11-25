@@ -1,0 +1,41 @@
+/* Header général */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111827; /* gris très foncé */
+  color: #f9fafb;
+  padding: 15px 40px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Logo / titre */
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation */
+header nav a {
+  color: #f9fafb;
+  margin-left: 20px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+header nav a:hover {
+  color: #3b82f6; /* bleu */
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  header nav a {
+    margin: 10px 0 0 0;
+  }
+}

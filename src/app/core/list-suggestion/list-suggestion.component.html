@@ -1,0 +1,27 @@
+<div class="list-suggestion">
+  <h2>Liste des suggestions</h2>
+
+  <input type="text"
+         placeholder="Recherche par titre..."
+         [(ngModel)]="searchText" />
+
+  <div *ngFor="let s of filteredSuggestions" class="card">
+    <h3>{{ s.title }}</h3>
+    <p>{{ s.description }}</p>
+    <p><strong>Catégorie : </strong>{{ s.category }}</p>
+    <p><strong>Date : </strong>{{ s.date | date }}</p>
+    <p><strong>Statut : </strong>{{ s.status }}</p>
+
+    <!-- Masquer les boutons si refusé -->
+    <div *ngIf="s.status !== 'refusee'">
+      <button>Like</button>
+      <button>Favoris</button>
+    </div>
+
+    <div *ngIf="s.status === 'refusee'">
+      <em>Cette suggestion a été refusée.</em>
+    </div>
+
+    <hr />
+  </div>
+</div>
